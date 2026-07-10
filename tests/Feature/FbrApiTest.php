@@ -339,6 +339,12 @@ class ScenarioInvoiceBuilder extends InvoiceBuilder
             'sroItemSerialNo' => $this->getDefaultSroItemSerialNo($scenario)
         ];
 
+        if ($this->scenarioId === 'SN012') {
+            $defaultItem['petroleumLevyOn'] = 'Value';
+            $defaultItem['petroleumLevyRate'] = 0;
+            $defaultItem['petroleumLevyAmount'] = 0;
+        }
+
         $item = array_merge($defaultItem, $overrides);
         $this->addItem($item);
         
@@ -349,6 +355,7 @@ class ScenarioInvoiceBuilder extends InvoiceBuilder
     {
         return match ($this->scenarioId) {
             'SN003', 'SN004', 'SN011' => 'MT',
+            'SN012' => 'Liter',
             'SN022' => 'KG',
             default => 'Numbers, pieces, units'
         };
