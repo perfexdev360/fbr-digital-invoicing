@@ -66,8 +66,8 @@ class Scenarios
                     'rate' => '18%',
                     'uoM' => 'MT',
                     'quantity' => 1,
-                    'valueSalesExcludingST' => 205000.00,
-                    'salesTaxApplicable' => 36900,
+                    'valueSalesExcludingST' => 208000.00,
+                    'salesTaxApplicable' => 37440,
                     'saleType' => 'Steel melting and re-rolling'
                 ]
             ]
@@ -109,13 +109,15 @@ class Scenarios
                     'rate' => '1%',
                     'uoM' => 'Numbers, pieces, units',
                     'quantity' => 1.0000,
+                    'totalValues' => 1010.00,
                     'valueSalesExcludingST' => 1000.00,
                     'salesTaxApplicable' => 10,
-                    'salesTaxWithheldAtSource' => 50.23,
-                    'furtherTax' => 120.00,
+                    'salesTaxWithheldAtSource' => 0,
+                    'furtherTax' => 0,
                     'sroScheduleNo' => 'EIGHTH SCHEDULE Table 1',
-                    'fedPayable' => 50.36,
-                    'discount' => 56.36,
+                    'fedPayable' => 0,
+                    'discount' => 0,
+                    'extraTax' => 0,
                     'saleType' => 'Goods at Reduced Rate',
                     'sroItemSerialNo' => '82'
                 ]
@@ -256,9 +258,9 @@ class Scenarios
                     'rate' => '18%',
                     'uoM' => 'MT',
                     'quantity' => 1,
-                    'valueSalesExcludingST' => 205000,
-                    'salesTaxApplicable' => 36900,
-                    'saleType' => 'Toll Manufacturing'
+                    'valueSalesExcludingST' => 208000,
+                    'salesTaxApplicable' => 37440,
+                    'saleType' => 'Steel melting and re-rolling'
                 ]
             ]
         ],
@@ -273,10 +275,10 @@ class Scenarios
                 'buyerRegistrationType' => 'Unregistered',
                 'invoiceRefNo' => 'SI-20250515-001',
                 'item' => [
-                    'hsCode' => '0101.2100',
+                    'hsCode' => '2710.1210',
                     'productDescription' => 'TEST',
                     'rate' => '1.43%',
-                    'uoM' => 'Numbers, pieces, units',
+                    'uoM' => 'Liter',
                     'quantity' => 123,
                     'totalValues' => 132,
                     'valueSalesExcludingST' => 100,
@@ -284,6 +286,9 @@ class Scenarios
                     'salesTaxWithheldAtSource' => 2,
                     'sroScheduleNo' => '1450(I)/2021',
                     'saleType' => 'Petroleum Products',
+                    'petroleumLevyOn' => 'Value',
+                    'petroleumLevyRate' => 0,
+                    'petroleumLevyAmount' => 0,
                     'sroItemSerialNo' => '4'
                 ]
             ]
@@ -597,7 +602,7 @@ class Scenarios
                 'sellerBusinessName' => 'Company 8',
                 'buyerNTNCNIC' => '1000000000078',
                 'buyerBusinessName' => 'FERTILIZER MANUFAC IRS NEW',
-                'buyerRegistrationType' => 'Registered',
+                'buyerRegistrationType' => 'Unregistered',
                 'invoiceRefNo' => 'SI-20250421-001',
                 'item' => [
                     'hsCode' => '0101.2100',
@@ -619,7 +624,7 @@ class Scenarios
                 'sellerBusinessName' => 'Company 8',
                 'buyerNTNCNIC' => '7000006',
                 'buyerBusinessName' => 'FERTILIZER MANUFAC IRS NEW',
-                'buyerRegistrationType' => 'Registered',
+                'buyerRegistrationType' => 'Unregistered',
                 'item' => [
                     'hsCode' => '0101.2100',
                     'productDescription' => 'test',
@@ -642,7 +647,7 @@ class Scenarios
                 'sellerBusinessName' => 'Company 8',
                 'buyerNTNCNIC' => '1000000000000',
                 'buyerBusinessName' => 'FERTILIZER MANUFAC IRS NEW',
-                'buyerRegistrationType' => 'Registered',
+                'buyerRegistrationType' => 'Unregistered',
                 'item' => [
                     'hsCode' => '0101.2100',
                     'productDescription' => 'TEST',
