@@ -104,7 +104,7 @@ class FbrScenarios
             'sale_type' => 'Petroleum Products',
             'buyer_registration_type' => 'Unregistered',
             'rate' => '1.43%',
-            'example_hs_code' => '0101.2100',
+            'example_hs_code' => '2710.1210',
             'sro_schedule_no' => '1450(I)/2021'
         ],
         'SN013' => [
