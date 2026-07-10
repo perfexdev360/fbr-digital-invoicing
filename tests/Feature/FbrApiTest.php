@@ -52,7 +52,7 @@ class FbrScenarios
             'name' => 'Sale of Exempt Goods (Sixth Schedule)',
             'description' => 'Goods listed in the Sixth Schedule are exempt from sales tax.',
             'sale_type' => 'Exempt goods',
-            'buyer_registration_type' => 'Registered',
+            'buyer_registration_type' => 'Unregistered',
             'rate' => 'Exempt',
             'example_hs_code' => '0102.2930',
             'sro_schedule_no' => '6th Schd Table I'
@@ -223,15 +223,15 @@ class FbrScenarios
             'name' => 'Sale Of Goods at Standard Rate to End Consumers by Retailers',
             'description' => 'Retailers selling taxable goods directly to end consumers at standard rate.',
             'sale_type' => 'Goods at standard rate (default)',
-            'buyer_registration_type' => 'Registered',
+            'buyer_registration_type' => 'Unregistered',
             'rate' => '18%',
             'example_hs_code' => '0101.2100'
         ],
         'SN027' => [
             'name' => 'Sale Of 3rd Schedule Goods to End Consumers by Retailers',
-            'description' => 'Retailers selling 3rd Schedule goods based on maximum retail price (MRP).',
+            'description' => 'Retailers selling goods under the 3rd Schedule, such as branded FMCGs, must charge and report sales tax based on the maximum retail price (MRP).',
             'sale_type' => '3rd Schedule Goods',
-            'buyer_registration_type' => 'Registered',
+            'buyer_registration_type' => 'Unregistered',
             'rate' => '18%',
             'example_hs_code' => '0101.2100'
         ],
@@ -375,14 +375,14 @@ class ScenarioInvoiceBuilder extends InvoiceBuilder
     private function getDefaultSalesValue(array $scenario): float
     {
         return match ($this->scenarioId) {
-            'SN003' => 205000,
+            'SN003' => 208000,
             'SN004' => 175000,
             'SN005', 'SN006', 'SN001', 'SN002', 'SN014' => 1000,
             'SN007' => 100,
             'SN008', 'SN027', 'SN028' => 0, // 3rd Schedule uses fixed price
             'SN009' => 2500,
             'SN010', 'SN012', 'SN016', 'SN017', 'SN019', 'SN022', 'SN025' => 100,
-            'SN011' => 205000,
+            'SN011' => 208000,
             'SN013' => 1000,
             'SN015' => 1234,
             'SN018' => 1000,
